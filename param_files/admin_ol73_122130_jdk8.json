@@ -30,7 +30,7 @@
     "value": "owls-122130-jdk8-ol73;Oracle:weblogic-122130-jdk8-ol73:owls-122130-jdk8-ol7;latest"
   },
   "vmSizeSelect": {
-    "value": "Standard_B1ms"
+    "value": "Standard_B2ms"
   },
   "wlsPassword": {
     "value": "Weblogic5678"

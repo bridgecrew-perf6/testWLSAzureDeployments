@@ -45,10 +45,10 @@
     "value": "owls-141100-jdk8-rhel76;Oracle:weblogic-141100-jdk8-rhel76:owls-141100-jdk8-rhel76;latest"
   },
   "vmSizeSelect": {
-    "value": "Standard_B1ms"
+    "value": "Standard_B2ms"
   },
   "vmSizeSelectForCoherence": {
-    "value": "Standard_B1ms"
+    "value": "Standard_B2ms"
   },
   "wlsPassword": {
     "value": "Weblogic5678"
@@ -57,6 +57,39 @@
     "value": "weblogic"
   },
   "enableCustomSSL": {
-    "value": false
+    "value": true
+  },
+  "sslConfigurationAccessOption": {
+    "value": "keyVaultStoredConfig"
+  },
+  "adminSSLKeyVaultResourceGroup": {
+    "value": "guru-rsg-dont-delete"
+  },
+  "adminSSLKeyVaultName": {
+    "value": "adminVMKeyVault"
+  },
+  "keyVaultCustomIdentityKeyStoreDataSecretName": {
+    "value": "IdentityKeyStoreDataSecret"
+  },
+  "keyVaultCustomIdentityKeyStorePassPhraseSecretName": {
+    "value": "IdentityStorePassPhraseSecret"
+  },
+  "keyVaultCustomIdentityKeyStoreType": {
+    "value": "JKS"
+  },
+  "keyVaultCustomTrustKeyStoreDataSecretName": {
+    "value": "TrustStoreDataSecret"
+  },
+  "keyVaultCustomTrustKeyStorePassPhraseSecretName": {
+    "value": "TrustStorePassPhraseSecret"
+  },
+  "keyVaultCustomTrustKeyStoreType": {
+    "value": "JKS"
+  },
+  "keyVaultPrivateKeyAliasSecretName": {
+    "value": "ServerPrivateKeyAlias"
+  },
+  "keyVaultPrivateKeyPassPhraseSecretName": {
+    "value": "PrivateKeyPassPhraseSecret"
   }
 }

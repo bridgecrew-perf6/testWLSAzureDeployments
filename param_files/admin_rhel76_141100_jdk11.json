@@ -30,7 +30,7 @@
     "value": "owls-141100-jdk11-rhel76;Oracle:weblogic-141100-jdk11-rhel76:owls-141100-jdk11-rhel76;latest"
   },
   "vmSizeSelect": {
-    "value": "Standard_B1ms"
+    "value": "Standard_B2ms"
   },
   "wlsPassword": {
     "value": "Weblogic5678"

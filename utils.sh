@@ -231,7 +231,14 @@ function validateTemplate()
 
    local artificatsLocation="$(getArtifactLocation)"
 
-   azCommand="az deployment group validate --resource-group ${RG_NAME} --template-file ${MAIN_TEMPLATE_RUN_FILE} --parameters ${PARAMS_FILE} --parameters _artifactsLocation=${artificatsLocation}"
+   if [ "$OFFER_TYPE" == "singlenode" ];
+   then
+       azCommand="az deployment group validate --resource-group ${RG_NAME} --template-file ${MAIN_TEMPLATE_RUN_FILE} --parameters ${PARAMS_FILE}"
+   else
+       azCommand="az deployment group validate --resource-group ${RG_NAME} --template-file ${MAIN_TEMPLATE_RUN_FILE} --parameters ${PARAMS_FILE} --parameters _artifactsLocation=${artificatsLocation}"
+
+   fi
+
    echo "Running Azure Command: $azCommand"
 
    eval $azCommand
@@ -272,7 +279,12 @@ function deployTemplate()
 
    local artificatsLocation="$(getArtifactLocation)"
 
-   azCommand="az deployment group create --resource-group ${RG_NAME} --template-file ${MAIN_TEMPLATE_RUN_FILE} --parameters ${PARAMS_FILE} --parameters _artifactsLocation=${artificatsLocation}"
+   if [ "$OFFER_TYPE" == "singlenode" ];
+   then
+       azCommand="az deployment group create --resource-group ${RG_NAME} --template-file ${MAIN_TEMPLATE_RUN_FILE} --parameters ${PARAMS_FILE}"
+   else
+       azCommand="az deployment group create --resource-group ${RG_NAME} --template-file ${MAIN_TEMPLATE_RUN_FILE} --parameters ${PARAMS_FILE} --parameters _artifactsLocation=${artificatsLocation}"
+   fi
    echo "Running Azure Command: $azCommand"
 
    eval $azCommand

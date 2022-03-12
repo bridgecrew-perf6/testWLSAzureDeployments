@@ -20,7 +20,7 @@ source $SCRIPT_DIR/utils.sh
 usage()
 {
 #  echo "$0 -rgprefix <RG_PREFIX> -offertype <OFFER_TYPE> -wlsversion <WLS_VERSION> -ostype <OS_TYPE> -jdkversion <JDK_VERSION>"
-#  echo "Example: $0 -rgprefix test_rg -offertype singlenode -wlsversion 141100 -ostype RHEL -jdkversion 8"
+#  echo "Example: $0 -rgprefix test_rg -offertype singlenode -wlsversion 141100 -ostype rhel76 -jdkversion jd8"
 #  exit 1
 
 cat << USAGE >&2
